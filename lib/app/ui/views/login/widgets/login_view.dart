@@ -1,4 +1,3 @@
-import 'package:app_marcaciones/app/routes/app_routes.dart';
 import 'package:app_marcaciones/app/ui/components/templates/ctm_input_field.dart';
 import 'package:app_marcaciones/app/ui/views/login/widgets/login_controller.dart';
 import 'package:app_marcaciones/core/utils/validators.dart';
@@ -20,14 +19,6 @@ class LoginView extends StatelessWidget {
                       image: AssetImage("assets/inicio.png"),
                       fit: BoxFit.cover,
                     ),
-                    /* gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: <Color>[
-                    Color.fromRGBO(201, 215, 243, 1.0),
-                    Color.fromRGBO(10, 61, 138, 1.0),
-                  ],
-                ), */
                   ),
                   child: ListView(
                       physics: const ClampingScrollPhysics(),
@@ -83,11 +74,10 @@ class LoginView extends StatelessWidget {
                               ),
                             ]),
                         ElevatedButton(
-                          /* onPressed: () => Get.offNamed(AppRoutes.HOME), */
                           onPressed: controller.doAuth,
                           style: ElevatedButton.styleFrom(
-                              backgroundColor: const Color.fromRGBO(10, 61, 138,
-                                  0.3), // Cambia el color de fondo aquí
+                              backgroundColor:
+                                  const Color.fromRGBO(10, 61, 138, 0.3),
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(25),
                               ),

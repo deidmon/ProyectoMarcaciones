@@ -39,6 +39,7 @@ class AltMarcar extends StatelessWidget {
             style: TextStyle(
               fontSize: 20.0,
               color: Color.fromARGB(255, 3, 48, 120),
+              decoration: TextDecoration.none,
             ),
           ),
           Column(
@@ -46,17 +47,19 @@ class AltMarcar extends StatelessWidget {
             children: [
               Text(
                 '${today.hour.toString()}:${today.minute.toString()}:${today.second.toString()}',
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 30.0,
                   color: Color.fromARGB(255, 3, 48, 120),
                   fontWeight: FontWeight.bold,
+                  decoration: TextDecoration.none,
                 ),
               ),
               Text(
                 '${today.day.toString()}/${today.month.toString()}/${today.year.toString()}',
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 15.0,
                   color: Color.fromARGB(255, 3, 48, 120),
+                  decoration: TextDecoration.none,
                 ),
               ),
             ],
@@ -73,6 +76,7 @@ class AltMarcar extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 14.0,
                   color: Color.fromARGB(255, 3, 48, 120),
+                  decoration: TextDecoration.none,
                 ),
               ),
             ],
@@ -100,7 +104,9 @@ class AltMarcar extends StatelessWidget {
               child: const Text(
                 'Cerrar',
                 style: TextStyle(
-                    fontSize: 18.0, color: Color.fromARGB(255, 255, 255, 255)),
+                    fontSize: 18.0,
+                    color: Color.fromARGB(255, 255, 255, 255),
+                    decoration: TextDecoration.none),
               ),
             ),
           ),

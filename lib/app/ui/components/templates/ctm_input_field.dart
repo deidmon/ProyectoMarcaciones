@@ -25,7 +25,6 @@ class _CustomInputFieldState extends State<CustomInputField> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     _obscureText = widget.isPassword;
   }
@@ -56,12 +55,6 @@ class _CustomInputFieldState extends State<CustomInputField> {
               decoration: InputDecoration(
                 labelStyle: TextStyle(color: Colors.white),
                 labelText: widget.label,
-                /* fillColor: Color.fromRGBO(100, 157, 243, 100),
-                filled: true, */
-
-                /* border: const OutlineInputBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(20.0)),
-                ), */
                 enabledBorder: const OutlineInputBorder(
                   borderSide:
                       BorderSide(color: Color.fromARGB(255, 3, 48, 120)),

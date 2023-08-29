@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 
-import '../alerts/alt_marcar.dart';
-
 class BtnMarcar extends StatelessWidget {
-  const BtnMarcar({Key? key}) : super(key: key);
+  const BtnMarcar({
+    Key? key,
+    required this.OnTap,
+  }) : super(key: key);
+
+  final void Function() OnTap;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        _showAlertDialog(context);
-      },
+      onTap: OnTap,
       child: Container(
         alignment: Alignment.center,
         width: 180.0,
@@ -34,15 +35,5 @@ class BtnMarcar extends StatelessWidget {
         ),
       ),
     );
-  }
-
-  void _showAlertDialog(BuildContext context) {
-    showDialog(context: context, builder: (context) => AltMarcar()
-        //showDialog(context: context, builder: (context) => AltTypeMarcar()
-        /* AlertDialog(
-        title: Text('Hola desde AlertDialog'),
-        content: Text('Este es un AlertDialog de ejemplo.'),
-      ), */
-        );
   }
 }

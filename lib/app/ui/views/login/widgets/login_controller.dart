@@ -1,25 +1,25 @@
+import 'dart:convert';
 import 'package:app_marcaciones/app/data/models/request/request_auth_model.dart';
 import 'package:app_marcaciones/app/data/repositories/user_repository.dart';
 import 'package:app_marcaciones/app/routes/app_routes.dart';
+import 'package:app_marcaciones/app/services/local_storage_service.dart';
+import 'package:app_marcaciones/core/utils/keys.dart';
 import 'package:dio/dio.dart';
 import 'package:get/get.dart';
 
 class LoginController extends GetxController {
   @override
   void onInit() {
-    // TODO: implement onInit
     super.onInit();
   }
 
   @override
   void onReady() {
-    // TODO: implement onReady
     super.onReady();
   }
 
   @override
   void onClose() {
-    // TODO: implement onClose
     super.onClose();
   }
 
@@ -40,6 +40,11 @@ class LoginController extends GetxController {
       );
 
       if (response.message == 'Inicio de sesión exitoso') {
+        print(json.encode(response.toJson()));
+        await LocalStorageService.set(
+          key: Keys.KeyUserAuth,
+          value: json.encode(response.toJson()),
+        );
         Get.offNamed(AppRoutes.HOME);
         print('Bienvenido ${response.user?.username}');
       } else {

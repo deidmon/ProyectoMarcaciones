@@ -1,8 +1,12 @@
-import 'package:app_marcaciones/app/ui/components/buttons/btn_marcar.dart';
 import 'package:flutter/material.dart';
 
 class CtnMarcar extends StatelessWidget {
-  const CtnMarcar({Key? key}) : super(key: key);
+  const CtnMarcar({
+    Key? key,
+    required this.buttonWidget,
+  }) : super(key: key);
+
+  final Widget buttonWidget;
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +37,7 @@ class CtnMarcar extends StatelessWidget {
               style: TextStyle(fontSize: 15.0, color: Colors.white),
             ),
           ),
-          BtnMarcar(),
+          buttonWidget,
         ],
       ),
     );

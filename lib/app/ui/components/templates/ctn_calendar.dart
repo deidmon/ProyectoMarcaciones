@@ -14,13 +14,9 @@ class CtnCalendar extends StatelessWidget {
     ];
     List<DateTime> absent = [
       DateTime(2023, 8, 02),
-
-      // Agrega más fechas para pintar de otro color
     ];
     List<DateTime> justified = [
       DateTime(2023, 8, 11),
-
-      // Agrega más fechas para pintar de otro color
     ];
     DateRangePickerController _controller = DateRangePickerController();
     return Container(
@@ -49,12 +45,9 @@ class CtnCalendar extends StatelessWidget {
               headerStyle: const DateRangePickerHeaderStyle(
                 textAlign: TextAlign.center,
               ),
-              //todayHighlightColor: Colors.purple,
               showNavigationArrow: true,
               selectionShape: DateRangePickerSelectionShape.circle,
               selectionColor: Colors.transparent,
-              //initialpunctual: punctual,
-
               cellBuilder: (BuildContext context,
                   DateRangePickerCellDetails cellDetails) {
                 final DateTime currentDate = cellDetails.date;
@@ -89,28 +82,6 @@ class CtnCalendar extends StatelessWidget {
                     ),
                   ),
                 );
-                /* return GestureDetector(
-                  /* onTap: () {
-                    if (ispunctual) {
-                      punctual.remove(currentDate);
-                    } else {
-                      punctual.add(currentDate);
-                    }
-
-                    _controller.punctual = List.from(punctual);
-                  }, */
-                  child: Container(
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: cellColor,
-                    ),
-                    child: Center(
-                      child: Text(
-                        currentDate.day.toString(),
-                      ),
-                    ),
-                  ),
-                ); */
               },
             ),
           ),

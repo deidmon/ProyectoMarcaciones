@@ -34,7 +34,7 @@ class CtnControl extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10.0,
           ),
           item(color: Colors.green, title: 'Conforme'),
@@ -48,7 +48,7 @@ class CtnControl extends StatelessWidget {
               //color: Colors.amberAccent,
               width: 100.0,
               height: 80,
-              child: Icon(
+              child: const Icon(
                 Icons.person,
                 size: 90.0,
                 color: Colors.orangeAccent,
@@ -71,7 +71,7 @@ class CtnControl extends StatelessWidget {
           radius: 5.0,
           backgroundColor: color,
         ),
-        SizedBox(
+        const SizedBox(
           width: 15.0,
         ),
         Text(title,

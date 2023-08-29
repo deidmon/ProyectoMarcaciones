@@ -1,3 +1,5 @@
+import 'package:app_marcaciones/app/ui/components/alerts/alt_marcar.dart';
+import 'package:app_marcaciones/app/ui/components/buttons/btn_marcar.dart';
 import 'package:app_marcaciones/app/ui/components/templates/ctn_calendar.dart';
 import 'package:app_marcaciones/app/ui/components/templates/ctn_marcar.dart';
 import 'package:app_marcaciones/app/ui/components/templates/opc_primary.dart';
@@ -56,10 +58,21 @@ class HomeView extends StatelessWidget {
                       ),
                     ),
                     CtnCalendar(),
-                    CtnMarcar(),
+                    CtnMarcar(
+                      buttonWidget: BtnMarcar(
+                        OnTap: () {
+                          controller.doRegistry();
+                          _showAlertDialog(context);
+                        },
+                      ),
+                    ),
                   ],
                 ),
               ),
             ));
+  }
+
+  void _showAlertDialog(BuildContext context) {
+    showDialog(context: context, builder: (context) => AltMarcar());
   }
 }

@@ -53,12 +53,6 @@ class BtnTypeMarcar extends StatelessWidget {
   }
 
   void _showAlertDialog(BuildContext context) {
-    //showDialog(context: context, builder: (context) => AltMarcar()
-    showDialog(context: context, builder: (context) => AltMarcar()
-        /* AlertDialog(
-        title: Text('Hola desde AlertDialog'),
-        content: Text('Este es un AlertDialog de ejemplo.'),
-      ), */
-        );
+    showDialog(context: context, builder: (context) => AltMarcar());
   }
 }

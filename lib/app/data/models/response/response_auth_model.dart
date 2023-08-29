@@ -22,6 +22,11 @@ class ResponseAuthModel {
       );
     }
   }
+  // se agrego para el localsecurestorage
+  Map<String, dynamic> toJson() => {
+        'message': message,
+        'user': user,
+      };
 }
 
 class User {
@@ -40,4 +45,11 @@ class User {
         username: json["username"],
         password: json["password"],
       );
+
+  // se agrego para el localsecurestorage
+  Map<String, dynamic> toJson() => {
+        "id": id,
+        "username": username,
+        "password": password,
+      };
 }
