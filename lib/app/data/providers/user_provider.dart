@@ -11,7 +11,7 @@ class UserProvider {
   //depende del método si es POST  o get
   Future<ResponseAuthModel> postAuth(RequestAuthModel requestAuth) async {
     final response = await _dio.post(
-      'http://192.168.1.54:3000/login',
+      'http://IP/login',
       data: requestAuth.toJson(),
     );
 
@@ -21,7 +21,7 @@ class UserProvider {
   Future<ResponseRegistryModel> postRegistry(
       RequestRegistryModel requestRegistry) async {
     final response = await _dio.post(
-      'http://192.168.1.54:3000/marcaciones',
+      'http://IP/marcaciones',
       data: requestRegistry.toJson(),
     );
 
