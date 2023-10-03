@@ -39,16 +39,16 @@ class LoginController extends GetxController {
         ),
       );
 
-      if (response.message == 'Inicio de sesión exitoso') {
+      if (response.body.isNotEmpty) {
         print(json.encode(response.toJson()));
         await LocalStorageService.set(
           key: Keys.KeyUserAuth,
           value: json.encode(response.toJson()),
         );
         Get.offNamed(AppRoutes.HOME);
-        print('Bienvenido ${response.user?.username}');
+        print('Bienvenido user');
       } else {
-        print('${response.message}');
+        print('${response.body}');
       }
     } catch (error) {
       if (error is DioException) {

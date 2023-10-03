@@ -8,7 +8,7 @@ class RequestAuthModel {
   String password;
 
   Map<String, dynamic> toJson() => {
-        'username': username,
-        'password': password,
+        'usuario': username,
+        'contraseña': password,
       };
 }

@@ -1,4 +1,4 @@
-class ResponseAuthModel {
+/* class ResponseAuthModel {
   String message;
   User? user;
 
@@ -51,5 +51,32 @@ class User {
         "id": id,
         "username": username,
         "password": password,
+      };
+}
+ */
+
+class ResponseAuthModel {
+  bool error;
+  int status;
+  String body;
+
+  ResponseAuthModel({
+    required this.error,
+    required this.status,
+    required this.body,
+  });
+
+  factory ResponseAuthModel.fromJson(Map<String, dynamic> json) =>
+      ResponseAuthModel(
+        error: json["error"],
+        status: json["status"],
+        body: json["body"],
+      );
+
+  //local storage
+  Map<String, dynamic> toJson() => {
+        "error": error,
+        "status": status,
+        "body": body,
       };
 }

@@ -53,16 +53,17 @@ class _CustomInputFieldState extends State<CustomInputField> {
                 }
               },
               decoration: InputDecoration(
-                labelStyle: TextStyle(color: Colors.white),
+                labelStyle:
+                    TextStyle(color: Color.fromARGB(255, 195, 195, 196)),
                 labelText: widget.label,
                 enabledBorder: const OutlineInputBorder(
                   borderSide:
-                      BorderSide(color: Color.fromARGB(255, 3, 48, 120)),
+                      BorderSide(color: Color.fromARGB(255, 204, 204, 204)),
                   borderRadius: BorderRadius.all(Radius.circular(20.0)),
                 ),
                 focusedBorder: const OutlineInputBorder(
                   borderSide:
-                      BorderSide(color: Color.fromARGB(255, 3, 48, 120)),
+                      BorderSide(color: Color.fromARGB(255, 148, 148, 149)),
                   borderRadius: BorderRadius.all(Radius.circular(20.0)),
                 ),
                 suffixIcon: widget.isPassword
@@ -81,7 +82,7 @@ class _CustomInputFieldState extends State<CustomInputField> {
             if (state.hasError)
               Text(
                 state.errorText!,
-                style: TextStyle(color: Colors.redAccent),
+                style: TextStyle(color: Color.fromARGB(255, 203, 100, 40)),
               )
           ],
         );
