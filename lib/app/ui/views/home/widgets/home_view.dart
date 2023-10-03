@@ -14,7 +14,7 @@ import 'package:latlong2/latlong.dart';
 const MAPBOX_ACCESS_TOKEN =
     'pk.eyJ1IjoicGl0bWFjIiwiYSI6ImNsY3BpeWxuczJhOTEzbnBlaW5vcnNwNzMifQ.ncTzM4bW-jpq-hUFutnR1g';
 
-/* final myPosition3 = LatLng(-6.7638751891380995, -79.86384501573184); */
+final myPosition3 = LatLng(-6.7638751891380995, -79.86384501573184); 
 
 class HomeView extends StatelessWidget {
   const HomeView({Key? key}) : super(key: key);
